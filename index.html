@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+
+    <h1 :class="classeColore">
+      {{messaggio}}
+    </h1>
+    <input type="text" v-model="classeColore" @keyup.enter="upTasto" placeholder="scrivi la classe da cambiare">
+
+    <button @click="cambioColore('red')">cambia in colore rosso</button>
+    <button @click="cambioColore('green')">cambia in colore verde</button>
+    
+    <img :src="image" alt="">
+
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
